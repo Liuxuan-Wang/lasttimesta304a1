@@ -6,29 +6,21 @@ categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
 ---
 
-```{r setup, include=FALSE, warning = FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Input data
-```{r, echo=FALSE}
-library(opendatatoronto)
-library(dplyr)
-library(tidyverse)
-# get package
-package <- show_package("fc4d95a6-591f-411f-af17-327e6c5d03c7")
+# R Markdown
 
-# get all resources for this package
-resources <- list_package_resources("fc4d95a6-591f-411f-af17-327e6c5d03c7")
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-# identify datastore resources; by default, Toronto Open Data sets datastore resource format to CSV for non-geospatial and GeoJSON for geospatial resources
-datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+You can embed an R code chunk like this:
 
-# load the first datastore resource as a sample
-data <- filter(datastore_resources, row_number()==1) %>% get_resource()
-data
+```{r cars}
+summary(cars)
+fit <- lm(dist ~ speed, data = cars)
+fit
 ```
-
 
 # Including Plots
 
