@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "A Hugo website"
+title = "Toronto Neighbourhood Auto Theft situation from 2014 to 2019"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
